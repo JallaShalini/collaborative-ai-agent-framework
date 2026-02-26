@@ -42,6 +42,7 @@ This system demonstrates how **multiple AI agents can collaborate asynchronously
 
 ## Repository Layout
 
+```
 collaborative-ai-agent-framework/
 ├── src/                         # Application source code
 │   ├── agents/                  # Specialized agent logic
@@ -72,3 +73,6 @@ collaborative-ai-agent-framework/
 ├── Dockerfile                   # Application container image
 ├── requirements.txt             # Python dependencies
 └── README.md
+
+```
+---
