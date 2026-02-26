@@ -43,35 +43,32 @@ This system demonstrates how **multiple AI agents can collaborate asynchronously
 ## Repository Layout
 
 collaborative-ai-agent-framework/
+├── src/                         # Application source code
+│   ├── agents/                  # Specialized agent logic
+│   ├── api/                     # FastAPI routes
+│   ├── graph/                   # Workflow orchestration layer
+│   ├── models/                  # ORM database models
+│   ├── schemas/                 # Pydantic schemas
+│   ├── services/                # Business and persistence logic
+│   ├── tools/                   # External agent tools
+│   ├── utils/                   # Shared helpers
+│   ├── worker/                  # Celery configuration and tasks
+│   │   ├── celery_app.py
+│   │   └── tasks.py
+│   ├── config.py                # Environment configuration
+│   ├── database.py              # Database initialization
+│   └── main.py                  # FastAPI entry point
 │
-├── src/ # Application source code
-│ ├── agents/ # Specialized agent logic
-│ ├── api/ # FastAPI routes
-│ ├── graph/ # Workflow orchestration layer
-│ ├── models/ # ORM database models
-│ ├── schemas/ # Pydantic schemas
-│ ├── services/ # Business and persistence logic
-│ ├── tools/ # External agent tools
-│ ├── utils/ # Shared helpers
-│ ├── worker/ # Celery configuration and tasks
-│ │ ├── celery_app.py
-│ │ └── tasks.py
-│ │
-│ ├── init.py
-│ ├── config.py # Environment configuration
-│ ├── database.py # Database initialization
-│ └── main.py # FastAPI entry point
+├── tests/                       # Automated tests
+│   ├── conftest.py
+│   ├── test_api_tasks.py
+│   ├── test_integration.py
+│   ├── test_websocket.py
+│   └── test_workflow.py
 │
-├── tests/ # Automated tests
-│ ├── conftest.py
-│ ├── test_api_tasks.py
-│ ├── test_integration.py
-│ ├── test_websocket.py
-│ └── test_workflow.py
-│
-├── .env.example # Environment variable template
+├── .env.example                 # Environment variable template
 ├── .gitignore
-├── docker-compose.yml # Multi-service orchestration
-├── Dockerfile # Application container image
-├── requirements.txt # Python dependencies
+├── docker-compose.yml           # Multi-service orchestration
+├── Dockerfile                   # Application container image
+├── requirements.txt             # Python dependencies
 └── README.md
